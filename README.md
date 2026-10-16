@@ -5,7 +5,7 @@ HTML &middot; CSS &middot; Javascript(ES Modules)와 **Suoabase(Auth / Database 
 
 실제 결제/예약 서비스가 아닙니다.
 
-** Demo ** : 깃배포주소 (배포 후 주소 교체)
+** Demo ** : https://jiwonnn13-hub.github.io/artworks/
 
 ---
 

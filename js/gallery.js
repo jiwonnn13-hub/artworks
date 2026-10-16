@@ -1,5 +1,5 @@
 //gallery.js
-import { supabase, escapeHTML, won} from './common.js';
+import { supabase, escapeHTML, won } from './common.js';
 
 const list = document.querySelector("#art-list");
 const category = document.querySelector("#category");
@@ -57,20 +57,20 @@ function showGallery() {
 }
 
 //supabase에서 작품 목록 조회
- async function  loadGallery() {
+async function loadGallery() {
     const { data, error } = await supabase
         .from('artworks')
         .select('*')
-        .order('id', { ascending: false });
+        .order('id', { ascending: true });
 
-        if (error) {
-            list.textContent = '조회오류: ' + error.message;
-            return;
-        }
-        artworks = data; //결과배열 보관
-        showGallery(); //첫 화면 출력
- }
- //입력이 바뀌면 목록 다시 출력
- category.addEventListener('change', showGallery)
- search.addEventListener('input', showGallery)
- loadGallery(); //처음 한번 조회
+    if (error) {
+        list.textContent = '조회오류: ' + error.message;
+        return;
+    }
+    artworks = data; //결과배열 보관
+    showGallery(); //첫 화면 출력
+}
+//입력이 바뀌면 목록 다시 출력
+category.addEventListener('change', showGallery)
+search.addEventListener('input', showGallery)
+loadGallery(); //처음 한번 조회

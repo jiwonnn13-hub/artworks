@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY || ARTWORKS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="./js/gallery.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">ART WORKS</a>
+            <div class="gnb">
+                <a href="index.html">홈</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="uplode.html">작품등록</a>
+                <a href="guide.html">이용안내</a>
+                <span id="account-nav">
+                    <a href="login.html">로그인</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container section">
+        <p class="sub-title">COLLECTION</p>
+        <h2>작품 갤러리</h2>
+        <p class="intro">공간에 어울리는 작품을 검색해보세요.</p>
+        <div class="toolbar">
+            <input type="search" id="search" placeholder="작품명 또는 작가 검색">
+            <select name="category" id="category">
+                <option>전체</option>
+                <option>추상화</option>
+                <option>인물화</option>
+                <option>정물화</option>
+                <option>풍경화</option>
+            </select>
+        </div>
+        <p id="result-count">검색 결과: 0개</p>
+        <div id="art-list" class="grid">작품을 불러오는 중...</div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            ART WORKS &middot; javascript + supabase 포트폴리오 &middot; 실제 결제/예약 서비스가 아닙니다.
+        </div>
+    </footer>
+</body>
+</html>

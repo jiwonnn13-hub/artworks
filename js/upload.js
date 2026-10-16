@@ -71,7 +71,7 @@ form.addEventListener('submit', async (event) => {
 
     // Supabase Storage의 art-images 버킷에 실제 이미지 파일을 올립니다.
     const { error: uploadError } = await supabase.storage
-        .from('artworks_images')
+        .from('artworks-images')
         .upload(path, file);
 
     if (uploadError) {
@@ -89,7 +89,7 @@ form.addEventListener('submit', async (event) => {
     // Public 버킷에 저장한 파일의 공개 URL을 만듭니다.
     // 주의: getPublicUrl은 파일이 실제로 보이는지 확인하는 함수는 아닙니다.
     const { data: urlData } = supabase.storage
-        .from('artworks_images')
+        .from('artworks-images')
         .getPublicUrl(path);
 
     // artwork = 작품 1개를 표현하는 객체({ 키: 값, ... })
@@ -120,7 +120,7 @@ form.addEventListener('submit', async (event) => {
     if (saveError) {
         // DB 저장에 실패했다면 Storage에 올라간 파일을 삭제 시도합니다.
         const { error: removeError } = await supabase.storage
-            .from('artworks_images').remove([path]);
+            .from('artworks-images').remove([path]);
         message.textContent = '작품 등록 실패: ' + saveError.message;
         if (removeError) console.log('이미지 정리 실패:', removeError.message);
         return;

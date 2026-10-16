@@ -14,6 +14,7 @@ HTML &middot; CSS &middot; Javascript(ES Modules)와 **Suoabase(Auth / Database 
 | --- | --- | --- |
 | 메인 | 등록된 작품을 9개씩 불러오고 **더보기** 버튼으로 추가 조회 | `index.html`, `js/home.js` |
 | 갤러리 | 작품명/작가 **검색** + 카테고리 필터, 검색결과 개수 표시 | `gallery.html`, `js/gallery.js` |
+| 작품 상세 | 갤러리에서 선택한 작품의 이미지, 설명, 구매가 및 월 대여료 표시 | `detail.html`, `js/detail.js` |
 | 로그인 / 회원가입 | 이메일 + 비밀번호 인증, 로그인 상태에 따라서 메뉴 변경 | `login.html`, `js/login.js`, `js/common.js` |
 | 작품등록 | 이미지 미리보기 -> Storage업로드 -> 작품 정보 DB 저장 | `upload.html`, `js/upload.js` |
 | 이용안내 |
@@ -36,6 +37,7 @@ HTML &middot; CSS &middot; Javascript(ES Modules)와 **Suoabase(Auth / Database 
 artworks/
 ├── index.html        # 메인
 ├── gallery.html      # 작품 갤러리
+├── detail.html       # 작품 상세
 ├── login.html        # 로그인 / 회원가입
 ├── upload.html       # 작품 등록
 ├── css/
@@ -47,6 +49,7 @@ artworks/
     ├── common.js     # Supabase 클라이언트, 로그인 상태, 공통 함수
     ├── home.js
     ├── gallery.js
+    ├── detail.js
     ├── login.js
     ├── upload.js
     └── mypage.js
